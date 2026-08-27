@@ -51,9 +51,7 @@ const page = async() => {
             username={profile?.usename || ""}
             bio={profile?.bio || ""}
             
-            // @ts-expect-error: mismatched prisma type
             link={links?.data || []}
-            // @ts-expect-error: mismatched prisma type
             socialLinks={profile?.socialLinks || []}
            
             
