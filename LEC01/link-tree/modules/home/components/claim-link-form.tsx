@@ -157,7 +157,7 @@ const ClaimLinkForm = () => {
           }
         </Button>
         <p className="text-xs text-neutral-500 dark:text-neutral-400 text-center w-full">
-          By continuing, you agree to TreeBio's Terms of Service and Privacy
+          By continuing, you agree to TreeBio&apos;s Terms of Service and Privacy
           Policy.
         </p>
       </form>

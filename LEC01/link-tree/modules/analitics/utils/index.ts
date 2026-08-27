@@ -83,7 +83,7 @@ export const generateDateRange = (days: number): string[] => {
 };
 
 export const fillMissingDates = (
-  data: { date: string; [key: string]: any }[],
+  data: { date: string; [key: string]: number | string }[],
   days: number,
   valueKey: string = "visits"
 ) => {
