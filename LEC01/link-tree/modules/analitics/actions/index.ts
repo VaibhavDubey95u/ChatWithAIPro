@@ -123,7 +123,7 @@ export const getDailyProfileVisits = async (userId: string, days: number = 30) =
     });
 
     // Group by date
-    const dailyVisits = visits.reduce((acc: Record<string, number>, visit) => {
+    const dailyVisits = visits.reduce((acc: Record<string, number>, visit: { visitedAt: Date }) => {
       const date = visit.visitedAt.toISOString().split('T')[0];
       acc[date] = (acc[date] || 0) + 1;
       return acc;
@@ -378,7 +378,7 @@ export const getDailyLinkClicks = async (linkId: string, days: number = 30) => {
     });
 
     // Group by date
-    const dailyClicks = clicks.reduce((acc: Record<string, number>, click) => {
+    const dailyClicks = clicks.reduce((acc: Record<string, number>, click: { clickedAt: Date }) => {
       const date = click.clickedAt.toISOString().split('T')[0];
       acc[date] = (acc[date] || 0) + 1;
       return acc;
