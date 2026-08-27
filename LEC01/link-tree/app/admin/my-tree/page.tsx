@@ -51,8 +51,8 @@ const page = async() => {
             username={profile?.usename || ""}
             bio={profile?.bio || ""}
             
-            link={links?.data || []}
-            socialLinks={profile?.socialLinks || []}
+            link={links?.data?.map(l => ({ ...l, description: l.description || "" })) || []}
+            socialLinks={profile?.socialLinks?.map(s => ({...s, platform: s.platform as "email" | "instagram" | "youtube"})) || []}
            
             
             
