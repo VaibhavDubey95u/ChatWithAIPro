@@ -51,8 +51,8 @@ const page = async() => {
             username={profile?.usename || ""}
             bio={profile?.bio || ""}
             
-            link={links?.data?.map(l => ({ ...l, description: l.description || "" })) || []}
-            socialLinks={profile?.socialLinks?.map(s => ({...s, platform: s.platform as "email" | "instagram" | "youtube"})) || []}
+            link={links?.data?.map((l: { id: string; title: string; url: string; description: string | null; clickCount: number; createdAt: Date; }) => ({ ...l, description: l.description || "" })) || []}
+            socialLinks={profile?.socialLinks?.map((s: { id: string; platform: string; url: string; }) => ({...s, platform: s.platform as "email" | "instagram" | "youtube"})) || []}
            
             
             
